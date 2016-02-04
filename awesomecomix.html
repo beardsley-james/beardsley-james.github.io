@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <head>
-	<!-- <link href = "/css/index.css">
-	<script src = "/js/index.js"></script> -->
+
 	<title>James Beardsley - Awesome Comix</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<link href = "./css/index.css" rel="stylesheet">
+	
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 	<script src="./js/awesomecomix.js"></script>
+
 </head>
 
 <body>
@@ -18,11 +21,11 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-3 col-md-offset-3 col-sm-6 text-center pageSelect">
-				<button type="button" class="btn btn-primary btn-block previousPage" disabled>&lArr;</button>
+			<div class="col-md-3 col-md-offset-3 col-xs-6 text-center pageSelect">
+				<button type="button" class="btn btn-primary btn-block btn-lg previousPage" disabled>&lArr;</button>
 			</div>
-			<div class="col-md-3 col-sm-6 text-center pageSelect">
-				<button type="button" class="btn btn-primary btn-block nextPage">&rArr;</button>
+			<div class="col-md-3 col-xs-6 text-center pageSelect">
+				<button type="button" class="btn btn-primary btn-block btn-lg nextPage">&rArr;</button>
 			</div>
 		</div>
 		
@@ -31,38 +34,38 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3" id="currentPage"></div>
-		<div>
-		
+			<div class="col-md-6 col-md-offset-3 well" id="currentPage"></div>
+		</div>
+	
 		<div class="row">
-			<div class="col-md-3 col-md-offset-3 col-sm-6 text-center pageSelect">
-				<button type="button" class="btn btn-primary btn-block previousPage" disabled>&lArr;</button>
+			<div class="col-md-3 col-md-offset-3 col-xs-6 text-center pageSelect">
+				<button type="button" class="btn btn-primary btn-block btn-lg previousPage" disabled>&lArr;</button>
 			</div>
-			<div class="col-md-3 col-sm-6 text-center pageSelect">
-				<button type="button" class="btn btn-primary btn-block nextPage">&rArr;</button>
+			<div class="col-md-3 col-xs-6 text-center pageSelect">
+				<button type="button" class="btn btn-primary btn-block btn-lg nextPage">&rArr;</button>
 			</div>
 		</div>
-			
 		
-		<div class="row text-center" div id="issueSelect">
+		
+		<div class="row text-center" id="issueSelect">
 			
-				<h2 class="text-center">Select Issue</h2>
-				
-				<button type="button" class="btn btn-primary btn-lg" id="issue01btn"><h2>1</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue02btn" disabled><h2>2</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue03btn" disabled><h2>3</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue04btn" disabled><h2>4</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue05btn" disabled><h2>5</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue06btn" disabled><h2>6</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue07btn" disabled><h2>7</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue08btn" disabled><h2>8</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue09btn" disabled><h2>9</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue10btn" disabled><h2>10</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue11btn" disabled><h2>11</h2></button>
-				<button type="button" class="btn btn-secondary btn-lg" id="issue12btn" disabled><h2>12</h2></button>
+			<h2 class="text-center">Select Issue</h2>
+			
+			<button type="button" class="btn btn-primary btn-lg" id="issue01btn">1</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue02btn">2</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue03btn" disabled>3</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue04btn" disabled>4</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue05btn" disabled>5</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue06btn" disabled>6</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue07btn" disabled>7</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue08btn" disabled>8</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue09btn" disabled>9</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue10btn" disabled>10</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue11btn" disabled>11</button>
+			<button type="button" class="btn btn-info btn-lg" id="issue12btn" disabled>12</button>
 			
 		</div>
 		
 	</div>
 
-	</body>
+</body>
