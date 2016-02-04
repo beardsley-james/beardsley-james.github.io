@@ -20,7 +20,7 @@ $(document).ready(function(){
 		output += "</h2>";
 		
 		//Change highlighting
-		$("#issueSelect button").removeClass("btn-primary").addClass("btn-info");
+		$("#issueSelect .btn-primary").removeClass("btn-primary").addClass("btn-info");
 		$(this).removeClass("btn-info").addClass("btn-primary");
 		
 		$("#issueTitle").html(output);
