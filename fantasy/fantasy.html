@@ -5,8 +5,8 @@
 		<title>James Beardsley - Warhammer Adventure</title>
 		
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-		<link rel="stylesheet" href = "./css/warhammer.css">
-		<link rel="stylesheet" href = "../css/index.css">
+<!--		<link rel="stylesheet" href = "./css/warhammer.css"> -->
+<!--		<link rel="stylesheet" href = "../css/index.css">  -->
 	</head>
 
 	<body>
@@ -23,16 +23,368 @@
 				
 				<div class="row">
 					
-					<div class="col-md-4 col-md-offset-2" id="selectionPlayerOne">
+					<div class="col-md-5 col-md-offset-1" id="selectionPlayerOne">
 					
-						<h2 class="well">Select Player 1</h2>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#p1CharGen" aria-controls="p1CharGen" role="tab" data-toggle="tab">Character Generator</a></li>
+							<li role="presentation"><a href="#p1NPCs" aria-controls="p1NPCs" role="tab" data-toggle="tab">NPCs</a></li>
+							<li role="presentation"><a href="#p1Advanced" aria-controls="p1Advanced" role="tab" data-toggle="tab">Advanced</a></li>
+						</ul>
+						
+						<div class="tab-content well">
+						
+							<div role="tabpanel" class="tab-pane active" id="p1CharGen">
+							
+								<form id="player1CharGenForm">
+					
+									<div class="form-group">
+										<label for="player1CharGenFormName">Character Name</label>
+										<input type="text" class="form-control" id="player1CharGenFormName">
+									</div>
+									
+									<div class="form-group">
+										<label for="player1CharGenFormCareer">Career</label>
+										<select class="form-control" id="player1CharGenFormCareer">
+											<option>Sample Career</option>
+											<option>Another Sample Career</option>
+											<option>Yet Another Sample Career</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1CharGenFormRace">Race</label>
+										<select class="form-control" id="player1CharGenFormRace">
+											<option>Human</option>
+											<option>Orc</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1CharGenFormGender">Gender</label>
+										<select class="form-control" id="player1CharGenFormGender">
+											<option>Male</option>
+											<option>Female</option>
+											<option>Neutral</option>
+										</select>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player1CharGenFormSubmit">Submit</button>
+									
+								</form>
+							
+							</div>
+							
+							<div role="tabpanel" class="tab-pane" id="p1NPCs">
+								
+								<form id="player1NPCs">
+						
+									<div class="radio">
+										<label>
+										<input type="radio" name="player1NPCsMenu" id="robberBaron" value="robberBaron" checked>
+											Robber Baron, a human desperado
+										</label>
+									</div>
+									
+									<div class="radio">
+										<label>
+										<input type="radio" name="player1NPCsMenu" id="slabGrunt" value="slabGrunt">
+											Slab Grunt, an orc warrior
+										</label>
+									</div>
+									
+									<div class="radio">
+										<label>
+										<input type="radio" name="player1NPCsMenu" id="lucyFormic" value="lucyFormic">
+											Lucy Formic, a formic worker
+										</label>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player1NPCsSubmit">Submit</button>
+								
+								</form>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane" id="p1Advanced">
+							
+								<form id="player1AdvancedForm" class="form-horizontal">
+					
+									<div class="form-group">
+										<label for="player1AdvancedFormName" class="col-md-3">Character Name</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormName">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormCareer" class="col-md-3">Career</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormCareer">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormRace" class="col-md-3">Race</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormRace">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormGender" class="col-md-3">Gender</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormGender">
+												<option>Male</option>
+												<option>Female</option>
+												<option>Neutral</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormWS" class="col-md-3">Weapon Skill</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormWS">
+										</div>
+										<label for="player1AdvancedFormBS" class="col-md-3">Ballistic Skill</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormBS">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormStrength" class="col-md-3">Strength</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormStrength">
+										</div>
+										<label for="player1AdvancedFormToughness" class="col-md-3">Toughness</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormToughness">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormAgility" class="col-md-3">Agility</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormAgility">
+										</div>
+										<label for="player1AdvancedFormWounds" class="col-md-3">Wounds</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormWounds">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormWeapon" class="col-md-3">Weapon</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormWeapon">
+												<option>Sword</option>
+												<option>Bow</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormArmor" class="col-md-3">Armor</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormArmor">
+												<option>Scale</option>
+												<option>Plate</option>
+											</select>
+										</div>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player1AdvancedFormSubmit">Submit</button>
+									
+								
+								</form>
+								
+							</div>
+							
+						</div>
 					
 					</div>
 					
-					<div class="col-md-4" id="selectionPlayerTwo">
+					<div class="col-md-5" id="selectionPlayerTwo">
 					
-						<h2 class="well">Select Player 2</h2>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#p2CharGen" aria-controls="p2CharGen" role="tab" data-toggle="tab">Character Generator</a></li>
+							<li role="presentation"><a href="#p2NPCs" aria-controls="p2NPCs" role="tab" data-toggle="tab">NPCs</a></li>
+							<li role="presentation"><a href="#p2Advanced" aria-controls="p2Advanced" role="tab" data-toggle="tab">Advanced</a></li>
+						</ul>
 						
+						<div class="tab-content well">
+						
+							<div role="tabpanel" class="tab-pane active" id="p2CharGen">
+							
+								<form id="player2CharGenForm">
+					
+									<div class="form-group">
+										<label for="player2CharGenFormName">Character Name</label>
+										<input type="text" class="form-control" id="player2CharGenFormName">
+									</div>
+									
+									<div class="form-group">
+										<label for="player2CharGenFormCareer">Career</label>
+										<select class="form-control" id="player2CharGenFormCareer">
+											<option>Sample Career</option>
+											<option>Another Sample Career</option>
+											<option>Yet Another Sample Career</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="player2CharGenFormRace">Race</label>
+										<select class="form-control" id="player2CharGenFormRace">
+											<option>Human</option>
+											<option>Orc</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label for="player2CharGenFormGender">Gender</label>
+										<select class="form-control" id="player2CharGenFormGender">
+											<option>Male</option>
+											<option>Female</option>
+											<option>Neutral</option>
+										</select>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player2CharGenFormSubmit">Submit</button>
+									
+								</form>
+							
+							</div>
+							
+							<div role="tabpanel" class="tab-pane" id="p2NPCs">
+								
+								<form id="player2NPCs">
+						
+									<div class="radio">
+										<label>
+										<input type="radio" name="player2NPCsMenu" id="robberBaron" value="robberBaron" checked>
+											Robber Baron, a human desperado
+										</label>
+									</div>
+									
+									<div class="radio">
+										<label>
+										<input type="radio" name="player2NPCsMenu" id="slabGrunt" value="slabGrunt">
+											Slab Grunt, an orc warrior
+										</label>
+									</div>
+									
+									<div class="radio">
+										<label>
+										<input type="radio" name="player2NPCsMenu" id="lucyFormic" value="lucyFormic">
+											Lucy Formic, a formic worker
+										</label>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player2NPCsSubmit">Submit</button>
+								
+								</form>
+								
+							</div>
+							
+							<div role="tabpanel" class="tab-pane" id="p2Advanced">
+							
+								<form id="player1AdvancedForm" class="form-horizontal">
+					
+									<div class="form-group">
+										<label for="player1AdvancedFormName" class="col-md-3">Character Name</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormName">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormCareer" class="col-md-3">Career</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormCareer">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormRace" class="col-md-3">Race</label>
+										<div class="col-md-9">
+											<input type="text" class="form-control" id="player1AdvancedFormRace">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormGender" class="col-md-3">Gender</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormGender">
+												<option>Male</option>
+												<option>Female</option>
+												<option>Neutral</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormWS" class="col-md-3">Weapon Skill</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormWS">
+										</div>
+										<label for="player1AdvancedFormBS" class="col-md-3">Ballistic Skill</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormBS">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormStrength" class="col-md-3">Strength</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormStrength">
+										</div>
+										<label for="player1AdvancedFormToughness" class="col-md-3">Toughness</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormToughness">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormAgility" class="col-md-3">Agility</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormAgility">
+										</div>
+										<label for="player1AdvancedFormWounds" class="col-md-3">Wounds</label>
+										<div class="col-md-3">
+											<input type="number" class="form-control" id="player1AdvancedFormWounds">
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormWeapon" class="col-md-3">Weapon</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormWeapon">
+												<option>Sword</option>
+												<option>Bow</option>
+											</select>
+										</div>
+									</div>
+									
+									<div class="form-group">
+										<label for="player1AdvancedFormArmor" class="col-md-3">Armor</label>
+										<div class="col-md-9">
+											<select class="form-control" id="player1AdvancedFormArmor">
+												<option>Scale</option>
+												<option>Plate</option>
+											</select>
+										</div>
+									</div>
+									
+									<button type="submit" class="btn btn-default form-control" id="player1AdvancedFormSubmit">Submit</button>
+									
+								
+								</form>
+								
+							</div>
+							
+						</div>
+					
 					</div>
 					
 				</div>
