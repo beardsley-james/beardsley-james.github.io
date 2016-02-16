@@ -23,7 +23,7 @@
 				
 				<div class="row">
 					
-					<div class="col-md-5 col-md-offset-1" id="selectionPlayerOne">
+					<div class="col-md-5 col-md-offset-1" id="player1Selection" class="selectionMenu">
 					
 						<ul class="nav nav-tabs" role="tablist">
 							<li role="presentation" class="active"><a href="#p1CharGen" aria-controls="p1CharGen" role="tab" data-toggle="tab">Character Generator</a></li>
@@ -35,40 +35,37 @@
 						
 							<div role="tabpanel" class="tab-pane active" id="p1CharGen">
 							
-								<form id="player1CharGenForm">
+								<form id="player1FormCharGen">
 					
 									<div class="form-group">
-										<label for="player1CharGenFormName">Character Name</label>
-										<input type="text" class="form-control" id="player1CharGenFormName">
+										<label for="player1FormCharGenName">Character Name</label>
+										<input type="text" class="form-control" id="player1FormCharGenName" val="Franz">
 									</div>
 									
 									<div class="form-group">
-										<label for="player1CharGenFormCareer">Career</label>
-										<select class="form-control" id="player1CharGenFormCareer">
-											<option>Sample Career</option>
-											<option>Another Sample Career</option>
-											<option>Yet Another Sample Career</option>
+										<label for="player1FormCharGenCareer">Career</label>
+										<select class="form-control" id="player1FormCharGenCareer">
+											<option>warrior</option>
 										</select>
 									</div>
 									
 									<div class="form-group">
-										<label for="player1CharGenFormRace">Race</label>
-										<select class="form-control" id="player1CharGenFormRace">
-											<option>Human</option>
-											<option>Orc</option>
+										<label for="player1FormCharGenSpecies">Race</label>
+										<select class="form-control" id="player1FormCharGenSpecies">
+											<option>human</option>
 										</select>
 									</div>
 									
 									<div class="form-group">
-										<label for="player1CharGenFormGender">Gender</label>
-										<select class="form-control" id="player1CharGenFormGender">
-											<option>Male</option>
+										<label for="player1FormCharGenGender">Gender</label>
+										<select class="form-control" id="player1FormCharGenGender">
+											<option>male</option>
 											<option>Female</option>
 											<option>Neutral</option>
 										</select>
 									</div>
 									
-									<button type="submit" class="btn btn-default form-control" id="player1CharGenFormSubmit">Submit</button>
+									<button type="submit" class="btn btn-default form-control" id="player1FormCharGenSubmit">Submit</button>
 									
 								</form>
 							
@@ -77,7 +74,7 @@
 							<div role="tabpanel" class="tab-pane" id="p1NPCs">
 								
 								<form id="player1NPCs">
-						
+						6
 									<div class="radio">
 										<label>
 										<input type="radio" name="player1NPCsMenu" id="robberBaron" value="robberBaron" checked>
@@ -99,7 +96,7 @@
 										</label>
 									</div>
 									
-									<button type="submit" class="btn btn-default form-control" id="player1NPCsSubmit">Submit</button>
+									<button type="submit" class="btn btn-default form-control" id="player1FormNPCsSubmit">Submit</button>
 								
 								</form>
 								
@@ -194,7 +191,7 @@
 										</div>
 									</div>
 									
-									<button type="submit" class="btn btn-default form-control" id="player1AdvancedFormSubmit">Submit</button>
+									<button type="submit" class="btn btn-default form-control" id="player1FormAdvancedSubmit">Submit</button>
 									
 								
 								</form>

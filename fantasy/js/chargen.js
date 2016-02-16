@@ -1,3 +1,31 @@
+function CharacterSelection(element) {
+	switch (element.attr("id").slice(0, -6).slice(11)) {
+		case "CharGen" : 
+			return CharacterGenerator(element); 
+			break;
+		case "NPCs" :
+			return "You've selected an NPC!";
+			break;
+		case "Advanced" :
+			return AdvancedCharacterGenerator(element);
+	};
+}
+
+function CharacterGenerator(element) {
+	var form = "#" + $(element).attr("id").slice(0, -6);
+	var name = $(form + "Name").val();
+	var career = eval($(form + "Career").val());
+	var species = eval($(form + "Species").val());
+	var gender = eval($(form + "Gender").val());
+	return new Character(name, species, career, gender);
+}
+
+function AdvancedCharacterGenerator(element) {
+	return "You've made an advanced character!"
+}
+
+
+
 var Character = function(name, race, career, gender) {
     this.name = name;
     this.race = race.name;
