@@ -1,9 +1,21 @@
+var character1 = {};
+var character2 = {};
+
 $(document).ready(function() {
 	$("#selectionMenu").on("click", "button", function(e){
 		e.preventDefault();
-		var character = CharacterSelection($(this));
-		console.log(character);
-		$("#player1Selection").text(character);
+		var player = $(this).attr("id")[6];
+		switch (player) {
+			case "1" :
+				character1 = CharacterSelection($(this));
+				$("#player1Selection").toggle();
+				$("#player1Display").html(profileRender(character1));
+				break;
+			case "2" :
+				character2 = CharacterSelection($(this));
+				$("#player2Selection").toggle();
+				$("#player2Display").html(profileRender(character2));
+		};
 	});
   
 	for (i=1; i<3; i++) {
@@ -26,6 +38,3 @@ var robberBaron = new Character("Robber Baron", human, mercenary, male, true);
 var lucyFormic = new Character("Lucy Formic", formic, soldier, none, true);
 var jamesBeardsley = new Character("James Beardsley", human, arbalest, male, true);
 var kellyLoveless = new Character("Kelly Loveless", human, warrior, female, true);
-
-console.log(weapons);
-console.log(armors);

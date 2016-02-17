@@ -1,4 +1,19 @@
-var profileBuilder = function(adventurer) {
+function profileRender (character) {
+	var profile = "<div class='characterProfile well'>";
+	profile += "<h2>" + character.name + "</h2>";
+	profile += "<h3>Weapon Skill: " + character.weaponSkill + "</h3>";
+	profile += "<h3>Ballistic Skill: " + character.ballisticSkill + "</h3>";
+	profile += "<h3>Strength: " + character.strength + "</h3>";
+	profile += "<h3>Toughness: " + character.toughness + "</h3>";
+	profile += "<h3>Agility: " + character.agility + "</h3>";
+	profile += "<h3>Weapon: " + capitalizeFirstLetter(character.gear.weapon.name) + "</h3>";
+	profile += "<h3>Armor: " + capitalizeFirstLetter(character.gear.armor.name) + "</h3>";
+	profile += "<h3>Wounds: " + character.wounds + "/" + character.maxWounds + "</h3>";
+	profile += "</div>";
+	return profile
+	}
+
+/* var profileBuilder = function(adventurer) {
     var profile = "";
     profile += "<div class=profile><img src='" + adventurer.src + "'><h2>" + adventurer.name + "</h2>";
     profile += "<b>" + adventurer.race + " " + adventurer.career + "</b></br>";
@@ -12,7 +27,7 @@ var profileBuilder = function(adventurer) {
     profile += "<li>Weapon: " + capitalizeFirstLetter(adventurer.gear.weapon.name) + "</li>";
     profile += "<li>Armor: " + capitalizeFirstLetter(adventurer.gear.armor.name) + "</li></ul></div>"
     return profile;
-}
+} */
 
 var formGen = function() {
     var outputString = "<form id='playerselect'><fieldset>";

@@ -9,6 +9,7 @@ function CharacterSelection(element) {
 		case "Advanced" :
 			return AdvancedCharacterGenerator(element);
 	};
+	console.log(character);
 }
 
 //$('input:radio[name=theme]:checked').val()
@@ -27,7 +28,7 @@ function AdvancedCharacterGenerator(element) {
 	var template = new Character("", golem, villager, none);
 	template.race = $(form + "Race").val();
 	template.name = $(form + "Name").val();
-	    if (template.name === "") {
+	if (template.name === "") {
         template.defaultName();
     };
 	template.career = $(form + "Career").val();
