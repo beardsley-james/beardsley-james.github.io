@@ -4,29 +4,54 @@ function CharacterSelection(element) {
 			return CharacterGenerator(element); 
 			break;
 		case "NPCs" :
-			return "You've selected an NPC!";
+			return eval($("input:radio[name=" + element.attr("id").slice(0, 7) + "NPCsMenu]:checked").val());
 			break;
 		case "Advanced" :
 			return AdvancedCharacterGenerator(element);
 	};
 }
 
+//$('input:radio[name=theme]:checked').val()
+
 function CharacterGenerator(element) {
 	var form = "#" + $(element).attr("id").slice(0, -6);
 	var name = $(form + "Name").val();
-	var career = eval($(form + "Career").val());
-	var species = eval($(form + "Species").val());
-	var gender = eval($(form + "Gender").val());
+	var career = eval($(form + "Career").val().toLowerCase());
+	var species = eval($(form + "Species").val().toLowerCase());
+	var gender = eval($(form + "Gender").val().toLowerCase());
 	return new Character(name, species, career, gender);
 }
 
 function AdvancedCharacterGenerator(element) {
-	return "You've made an advanced character!"
+	var form = "#" + $(element).attr("id").slice(0, -6);
+	var template = new Character("", golem, villager, none);
+	template.race = $(form + "Race").val();
+	template.name = $(form + "Name").val();
+	    if (template.name === "") {
+        template.defaultName();
+    };
+	template.career = $(form + "Career").val();
+	template.gender = eval($(form + "Gender").val().toLowerCase());
+	template.weaponSkill = $(form + "WS").val();
+	template.ballisticSkill = $(form + "BS").val();
+	template.strength = $(form + "Strength").val();
+	template.toughness = $(form + "Toughness").val();
+	template.agility = $(form + "Agility").val();
+	template.wounds = $(form + "Wounds").val();
+	template.strengthBonus = Math.floor(template.strength / 10);
+	template.toughnessBonus = Math.floor(template.toughness / 10);
+	template.maxWounds = template.wounds;
+	template.gear = {
+		weapon: eval($(form + "Weapon").val().toLowerCase()),
+		armor: eval($(form + "Armor").val().toLowerCase())
+	};
+	return template;
 }
 
 
+var npcs = [];
 
-var Character = function(name, race, career, gender) {
+var Character = function(name, race, career, gender, npc) {
     this.name = name;
     this.race = race.name;
     if (this.name === "") {
@@ -44,21 +69,24 @@ var Character = function(name, race, career, gender) {
     this.maxWounds = this.wounds;
     this.gear = career.gear;
     this.gender = gender;
-    if (this.race === "Human") {
-        this.src = "http://i.imgsafe.org/bd2af8d.gif"
-    } else if (this.race === "Dwarf") {
-        this.src = "http://i.imgsafe.org/c20a89e.gif"
-    } else if (this.race === "Elf") {
-        this.src = "http://i.imgsafe.org/c31b869.gif"
-    } else if (this.race === "Halfling") {
-        this.src = "http://i.imgsafe.org/be0d5d5.gif"
-    } else if (this.race === "Orc") {
-        this.src = "http://i.imgsafe.org/bce0106.gif"
-    } else if (this.race === "Goblin") {
-        this.src = "http://i.imgsafe.org/beebe79.gif"
-    } else if (this.race === "Formic") {
-        this.src = "http://i.imgsafe.org/bfe64e0.gif"
-    }
+	if (npc) {
+		npcs.push(this.name);
+	}
+//    if (this.race === "Human") {
+//        this.src = "http://i.imgsafe.org/bd2af8d.gif"
+//    } else if (this.race === "Dwarf") {
+//        this.src = "http://i.imgsafe.org/c20a89e.gif"
+//    } else if (this.race === "Elf") {
+//        this.src = "http://i.imgsafe.org/c31b869.gif"
+//    } else if (this.race === "Halfling") {
+//        this.src = "http://i.imgsafe.org/be0d5d5.gif"
+//    } else if (this.race === "Orc") {
+//        this.src = "http://i.imgsafe.org/bce0106.gif"
+//    } else if (this.race === "Goblin") {
+//        this.src = "http://i.imgsafe.org/beebe79.gif"
+//    } else if (this.race === "Formic") {
+//        this.src = "http://i.imgsafe.org/bfe64e0.gif"
+//    }
 };
 
 Character.prototype.defaultName = function() {

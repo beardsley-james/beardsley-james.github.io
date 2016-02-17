@@ -1,5 +1,5 @@
 var races = [];
-var Race = function(race, ws, bs, str, tou, agi, w) {
+var Race = function(race, ws, bs, str, tou, agi, w, npc) {
     this.name = race;
     this.weaponSkill = ws;
     this.ballisticSkill = bs;
@@ -7,5 +7,7 @@ var Race = function(race, ws, bs, str, tou, agi, w) {
     this.toughness = tou;
     this.agility = agi;
     this.wounds = w;
-    races.push(this.name);
+	if (!npc) {
+		races.push(this.name);
+	}
 };

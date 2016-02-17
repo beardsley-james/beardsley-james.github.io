@@ -22,6 +22,8 @@ var orc = new Race("Orc", 20, 10, 25, 25, 20, 20);
 var goblin = new Race("Goblin", 20, 25, 15, 15, 30, 15);
 var formic = new Race("Formic", 15, 15, 25, 25, 20, 20);
 
+var golem = new Race("", 0, 0, 0, 0, 0, 0, true);
+
 var humanNames = ["Steve", "Gregg", "Stann", "Friedrich", "Franz"];
 var dwarfNames = ["Ullva", "Skenn", "Advaar", "Noln", "Dem"];
 var elfNames = ["Savaa", "Irwin", "Idaa", "Umriel", "Zarr"];
@@ -37,7 +39,8 @@ var arbalest = new Career("Arbalest", 0, 5, 0, 0, 5, {weapon: shortbow, armor: p
 var fencer = new Career("Fencer", 10, 0, 5, 0, 10, {weapon: sword, armor: cloth});
 var raider = new Career("Raider", 10, 0, 5, 0, 0, {weapon: axe, armor: scale});
 
+var villager = new Career("", 0, 0, 0, 0, 0, {}, true);
+
 var male = new Gender("Male", "he", "his", "himself", "male");
 var female = new Gender("Female", "she", "her", "herself", "female");
 var none = new Gender("Genderless", "it", "its", "itself", "none");
-

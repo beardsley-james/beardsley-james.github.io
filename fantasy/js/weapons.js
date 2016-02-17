@@ -1,7 +1,10 @@
+var weapons = [];
+
 var Weapon = function(name, damage, type) {
     this.name = name;
     this.damage = damage;
     this.type = type;
+	weapons.push(this.name)
 };
 
 Weapon.prototype.attack = function(wielder, target) {

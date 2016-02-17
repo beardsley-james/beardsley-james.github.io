@@ -1,5 +1,5 @@
 var careers = [];
-var Career = function(career, ws, bs, str, tou, agi, gear) {
+var Career = function(career, ws, bs, str, tou, agi, gear, npc) {
     this.name = career;
     this.weaponSkill = ws;
     this.ballisticSkill = bs;
@@ -7,5 +7,7 @@ var Career = function(career, ws, bs, str, tou, agi, gear) {
     this.toughness = tou;
     this.agility = agi;
     this.gear = gear;
-    careers.push(this.name);
+    if (!npc) {
+		careers.push(this.name);
+	}
 };
