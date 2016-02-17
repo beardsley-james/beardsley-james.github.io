@@ -1,14 +1,15 @@
 function profileRender (character) {
 	var profile = "<div class='characterProfile well'>";
-	profile += "<h2>" + character.name + "</h2>";
-	profile += "<h3>Weapon Skill: " + character.weaponSkill + "</h3>";
-	profile += "<h3>Ballistic Skill: " + character.ballisticSkill + "</h3>";
-	profile += "<h3>Strength: " + character.strength + "</h3>";
-	profile += "<h3>Toughness: " + character.toughness + "</h3>";
-	profile += "<h3>Agility: " + character.agility + "</h3>";
-	profile += "<h3>Weapon: " + capitalizeFirstLetter(character.gear.weapon.name) + "</h3>";
-	profile += "<h3>Armor: " + capitalizeFirstLetter(character.gear.armor.name) + "</h3>";
-	profile += "<h3>Wounds: " + character.wounds + "/" + character.maxWounds + "</h3>";
+	profile += "<h3>" + character.name;
+	profile += " <small>" + character.race + " " + character.career + "</small></h3>";
+	profile += "<p>Weapon Skill: " + character.weaponSkill + "</p>";
+	profile += "<p>Ballistic Skill: " + character.ballisticSkill + "</p>";
+	profile += "<p>Strength: " + character.strength + "</p>";
+	profile += "<p>Toughness: " + character.toughness + "</p>";
+	profile += "<p>Agility: " + character.agility + "</p>";
+	profile += "<p>Weapon: " + capitalizeFirstLetter(character.gear.weapon.name) + "</p>";
+	profile += "<p>Armor: " + capitalizeFirstLetter(character.gear.armor.name) + "</p>";
+	profile += "<p>Wounds: " + character.wounds + "/" + character.maxWounds + "</p>";
 	profile += "</div>";
 	return profile
 	}
