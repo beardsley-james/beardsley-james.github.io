@@ -2,7 +2,7 @@ var character1 = {};
 var character2 = {};
 
 $(document).ready(function() {
-	$("#selectionMenu").on("click", "button", function(e){
+	$("#selectionMenu").on("click", "button.classSelect", function(e){
 		e.preventDefault();
 		var player = $(this).attr("id")[6];
 		switch (player) {
@@ -17,7 +17,16 @@ $(document).ready(function() {
 				$("#player2Display").html(profileRender(character2));
 		};
 	});
-  
+	
+	$("#runFight button").on("click", function(e){
+		$("#selectionMenu").toggle();
+		$("#charsheetPlayerOne").html(profileRender(character1));
+		$("#charsheetPlayerTwo").html(profileRender(character2));
+		$("#fightTranscript").html(fight(character1, character2));
+		$("#gameOutput").toggle();
+	});
+	
+	$("#gameOutput").toggle();
 	for (i=1; i<3; i++) {
 
 		$("#player" + i + "NPCs").html(npcListGenerator(npcs));

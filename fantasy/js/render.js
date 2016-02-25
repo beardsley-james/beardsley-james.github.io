@@ -1,5 +1,5 @@
 function profileRender (character) {
-	var profile = "<div class='characterProfile well'>";
+	var profile = "";
 	profile += "<h3>" + character.name;
 	profile += " <small>" + character.race + " " + character.career + "</small></h3>";
 	profile += "<p>Weapon Skill: " + character.weaponSkill + "</p>";
@@ -10,7 +10,6 @@ function profileRender (character) {
 	profile += "<p>Weapon: " + capitalizeFirstLetter(character.gear.weapon.name) + "</p>";
 	profile += "<p>Armor: " + capitalizeFirstLetter(character.gear.armor.name) + "</p>";
 	profile += "<p>Wounds: " + character.wounds + "/" + character.maxWounds + "</p>";
-	profile += "</div>";
 	return profile
 	}
 
@@ -30,7 +29,7 @@ function profileRender (character) {
     return profile;
 } */
 
-var formGen = function() {
+/* var formGen = function() {
     var outputString = "<form id='playerselect'><fieldset>";
 
     outputString += "<legend><h2>Select First Combatant</h2></legend>";
@@ -75,4 +74,4 @@ var formGen = function() {
     outputString += "<button id='fightitout'>Fight It Out!</button></form>"
 
     return outputString;
-}
+} */ 

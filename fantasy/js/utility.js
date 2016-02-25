@@ -57,7 +57,7 @@ function npcListGenerator(npcs) {
 		npcs.forEach(function(npc){
 			npcList += radioButtonGenerator(npc);
 		});
-		npcList += "<button type='submit' class='btn btn-default form-control'";
+		npcList += "<button type='submit' class='btn btn-default form-control classSelect'";
 		npcList += "id='player"+i+"FormNPCsSubmit'>Submit</button>"
 		return npcList;
 }
